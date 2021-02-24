@@ -18,19 +18,27 @@
         <nav>
             <div class="nav-container">
                 <div id="logo">
-                    <img src="./assets/img/wish-logo-800.png" alt="logo" />
+                    <router-link to="/">
+                        <img src="./assets/img/wish-logo-800.png" alt="logo" />
+                    </router-link>
                 </div>
 
                 <ul id="icons">
                     <li>
-                        <i class="fas fa-user"></i>
+                        <router-link to="/user-setting">
+                            <i class="fas fa-user"></i>
+                        </router-link>
                     </li>
                     <li>
-                        <i class="fas fa-heart"></i>
+                        <router-link to="/wish-list">
+                            <i class="fas fa-heart"></i>
+                        </router-link>
                         <span id="nav-notif"></span>
                     </li>
                     <li>
-                        <i class="fas fa-shopping-cart"></i>
+                        <router-link to="/shopping-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </router-link>
                     </li>
                 </ul>
             </div>
