@@ -57,13 +57,23 @@
             <div class="card-cart-container">
                 <div class="card-container">
                     <div class="card" v-for="product in products">
+
                         <div class="img-container">
                             <img v-bind:src="product.img" alt="">
                         </div>
+
                         <div class="card-text">
                             <h3> {{ product.description }} </h3>
                             <span> {{ product.price }}€</span>
+                        </div>
 
+                        <div class="card-icons">
+                            <div class="like-container">
+                                <input type="checkbox" name="checkbox" v-bind:id="product.id">
+                                <label v-bind:for="product.id">
+                                  <i class="fas fa-heart"></i>
+                                </label>
+                            </div>
                         </div>
 
                     </div>
