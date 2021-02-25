@@ -56,7 +56,12 @@
             <!--  Cards display -->
             <div class="card-cart-container">
                 <div class="card-container">
-                    hell
+                    <div class="card" v-for="product in products">
+                        <div class="img-container">
+                            <img v-bind:src="product.img" alt="">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
