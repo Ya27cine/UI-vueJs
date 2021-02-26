@@ -86,7 +86,11 @@
                               </button>
                             </div>
                         </div>
-
+                    </div>
+                    <!-- no result message -->
+                    <div v-if="filtredList.length == [] " class="no-result">
+                        <h2> Desole </h2>
+                        <p> Aucun resultat trouve </p>
                     </div>
                 </div>
             </div>
