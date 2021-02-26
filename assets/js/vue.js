@@ -21,6 +21,7 @@ const Home = {
         return {
             products,
             searchKey: '',
+            liked: []
         }
     },
     computed: {
@@ -29,7 +30,7 @@ const Home = {
                 return product.description.toLowerCase().includes(this.searchKey.toLowerCase())
             })
         }
-    }
+    },
 }
 
 const UserSetting = {
