@@ -20,7 +20,7 @@ const Home = {
     data: () => {
         return {
             products,
-            searchKey: ' ',
+            searchKey: '',
         }
     },
     computed: {
