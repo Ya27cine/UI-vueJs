@@ -18,7 +18,17 @@ const Home = {
     template: '#home',
     name: 'Home',
     data: () => {
-        return { products }
+        return {
+            products,
+            searchKey: ' ',
+        }
+    },
+    computed: {
+        filtredList() {
+            return this.products.filter(product => {
+                return product.description.toLowerCase().includes(this.searchKey.toLowerCase())
+            })
+        }
     }
 }
 
