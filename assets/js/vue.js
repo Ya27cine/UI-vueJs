@@ -29,8 +29,24 @@ const Home = {
             return this.products.filter(product => {
                 return product.description.toLowerCase().includes(this.searchKey.toLowerCase())
             })
+        },
+        getlikeCookie() {
+            let cookiesValue = JSON.parse($cookies.get('like'));
+            cookiesValue == null ? this.liked = [] : this.liked = cookiesValue;
         }
     },
+    methods: {
+        cookieLiked() {
+            document.addEventListener('input', () => {
+                setTimeout(() => {
+                    $cookies.set('like', JSON.stringify(this.liked));
+                }, 300);
+            })
+        }
+    },
+    mounted: () => {
+        this.getlikeCookie;
+    }
 }
 
 const UserSetting = {
